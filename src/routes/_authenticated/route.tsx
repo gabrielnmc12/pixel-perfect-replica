@@ -52,7 +52,3 @@ function Shell() {
   );
 }
 
-export function useMe() {
-  return useQuery(meQuery).data!;
-}
-export { Button };
