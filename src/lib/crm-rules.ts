@@ -27,7 +27,7 @@ export function reaisParaCentavos(v: string): number | null {
   const norm = s.includes(",") ? s.replace(/\./g, "").replace(",", ".") : s;
   const m = /^(\d+)(?:\.(\d{1,2}))?$/.exec(norm);
   if (!m) return null;
-  return parseInt(m[1], 10) * 100 + parseInt((m[2] ?? "0").padEnd(2, "0"), 10);
+  return parseInt(m[1] ?? "0", 10) * 100 + parseInt((m[2] ?? "0").padEnd(2, "0"), 10);
 }
 
 export function formatarCentavos(c: number) {

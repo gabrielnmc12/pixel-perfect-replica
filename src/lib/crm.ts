@@ -5,11 +5,11 @@ export type Perfil = "VENDEDOR" | "GERENTE" | "SUPERVISOR" | "DIRETOR" | "MARKET
 export type Status = "NOVO" | "DISTRIBUIDO" | "NEGOCIACAO" | "GANHO" | "PERDIDO";
 export type Me = { id: string; nome: string; login: string; perfil: Perfil; loja_id: number | null; loja_nome: string | null };
 
-export const ORIGENS = ["Instagram", "WhatsApp", "Loja física", "Site", "Indicação", "Decorador"];
-export const PORTES = ["Pequeno", "Médio", "Grande"];
-export const CANAIS = ["Telefone", "WhatsApp", "Presencial", "Instagram", "Outro"];
-export const MOTIVOS_PERDA = ["Preço", "Prazo de entrega", "Desistiu da compra", "Comprou com concorrente", "Sem retorno", "Produto indisponível", "Outro"];
-export const CATEGORIAS = ["Sofá", "Mesa de jantar", "Cama", "Guarda-roupa", "Rack", "Poltrona", "Cozinha planejada", "Escritório"];
+export const ORIGENS: [string, ...string[]] = ["Instagram", "WhatsApp", "Loja física", "Site", "Indicação", "Decorador"];
+export const PORTES: [string, ...string[]] = ["Pequeno", "Médio", "Grande"];
+export const CANAIS: [string, ...string[]] = ["Telefone", "WhatsApp", "Presencial", "Instagram", "Outro"];
+export const MOTIVOS_PERDA: [string, ...string[]] = ["Preço", "Prazo de entrega", "Desistiu da compra", "Comprou com concorrente", "Sem retorno", "Produto indisponível", "Outro"];
+export const CATEGORIAS: [string, ...string[]] = ["Sofá", "Mesa de jantar", "Cama", "Guarda-roupa", "Rack", "Poltrona", "Cozinha planejada", "Escritório"];
 export const STATUS_LABEL: Record<Status, string> = { NOVO: "Novo", DISTRIBUIDO: "Distribuído", NEGOCIACAO: "Negociação", GANHO: "Ganho", PERDIDO: "Perdido" };
 export const RESULTADO_LABEL: Record<string, string> = { FALOU: "Falou", NAO_ATENDEU: "Não atendeu", REMARCOU: "Remarcou" };
 export const PERFIL_LABEL: Record<Perfil, string> = { VENDEDOR: "Vendedor", GERENTE: "Gerente", SUPERVISOR: "Supervisor", DIRETOR: "Diretor", MARKETING: "Marketing" };
